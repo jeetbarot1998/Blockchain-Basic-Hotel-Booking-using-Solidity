@@ -29,4 +29,8 @@ contract HotelRoom{
         currenStatus= Statuses.Occupied;
         emit Occupy(msg.sender, msg.value);
     }
+    function isOwner() public view returns(bool) {
+        return(msg.sender == owner);
+    }
+
 }
